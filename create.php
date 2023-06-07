@@ -10,7 +10,7 @@
 
   <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 class="display-4"> 제목과 설명란에 데이터를 입력해보세요 </h1>
+        <h1 class="display-4"> Input the title and description </h1>
       </div>
   </div>
   <div class="container">
@@ -18,11 +18,11 @@
 
     <div class="form-group">
     <label >Title</label>
-    <input type="text" name="title" class="form-control" placeholder="제목을 입력하시오">
+    <input type="text" name="title" class="form-control" placeholder="Input Title">
     </div>
   <div class="form-group">
     <label >description</label>
-    <input type="text" name="description" class="form-control"  placeholder="설명을 입력하시오">
+    <input type="text" name="description" class="form-control"  placeholder="Input Description">
   </div>
 
   <button type="submit" class="btn btn-primary">Submit</button>
