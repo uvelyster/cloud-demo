@@ -19,3 +19,7 @@ systemctl enable httpd
 yum install -y mysql nfs-utils rpcbind
 systemctl start mysql
 yum install -y unzip stress
+
+# mariadb install
+# yum install -y mariadb105
+# yum install -y mariadb105-server
