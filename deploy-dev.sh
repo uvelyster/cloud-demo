@@ -1,6 +1,6 @@
 #!/bin/bash
 
-docker rm -fv webserver dbserver 
+docker rm -fv webserver phpdbsvc
 
 docker network ls | grep myapp-net
 if [ $? -ne 0 ]
@@ -18,9 +18,11 @@ docker run \
   -v mydata:/var/lib/mysql \
   -v ./create_db_webtest.sql:/docker-entrypoint-initdb.d/webtest.sql \
   --net myapp-net \
-  --name dbserver \
-  quay.io/uvelyster/mysql:5.7
+  --name phpdbsvc \
+  myregistry.com/myproj/phpdb:v2
+#  quay.io/uvelyster/mysql:5.7
 
-docker run --net myapp-net -d -p 2222:80 -v /source:/var/www/html --name webserver php:7.3-apache
-docker exec webserver docker-php-ext-install mysqli
-docker restart webserver
+docker run --net myapp-net -d -p 80:80 -v /source:/var/www/html --name webserver phpweb:v1
+
+# docker exec webserver docker-php-ext-install mysqli
+# docker restart webserver

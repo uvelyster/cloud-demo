@@ -22,6 +22,7 @@ $serverip= $_SERVER['SERVER_ADDR'];
         
     <h2><p> Connect to Database </p></h2>
     <button type="button" class="btn btn-primary" onclick="location.href='create.php'" > Insert Data </button>
+    <button type="button" class="btn btn-primary" onclick="location.href='output.php'" > Show Data </button>
   </div>
 
     

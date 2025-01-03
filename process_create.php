@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect("dbserver","testuser","testpass","webtest",3306);
+$conn = mysqli_connect("phpdbsvc","testuser","testpass","webtest",3306);
 
 $sql = "insert into items (title, description, created) value ('{$_POST['title']}','{$_POST['description']}', now())";
 
